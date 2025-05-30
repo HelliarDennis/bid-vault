@@ -98,6 +98,7 @@
   <script setup>
   import { ref } from 'vue'
   import { router } from '@inertiajs/vue3'
+  import AppLayout from '@/layouts/AppLayout.vue'
   import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from '@/components/ui/card'
   import { Button } from '@/components/ui/button'
   import { Badge } from '@/components/ui/badge'
@@ -116,6 +117,11 @@
     categories: Array,
     currentCategory: String,
     currentStatus: String,
+  })
+
+
+  defineOptions({
+      layout: AppLayout
   })
 
   const selectedCategory = ref(props.currentCategory || null)
